@@ -2,7 +2,7 @@
 
 Standalone, dependency-free `do concurrent` portability reproducers. Each
 mini-app is built from ≥2 separately-compiled TUs and links nothing but the
-Fortran + offload runtime. See [`../docs/dc_patterns_plan.md`](../docs/dc_patterns_plan.md)
+Fortran + offload runtime.
 for the design.
 
 ## Concept
