@@ -1,0 +1,2 @@
+# build artifacts (objects, .mod files, executables all live under build/)
+**/build/
