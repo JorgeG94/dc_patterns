@@ -33,6 +33,20 @@ MODFLAG  ?= -module build
 #   DATA     = acc
 
 # ===========================================================================
+# AMD / amdflang — DC offloads to AMD GPU via OpenMP do-concurrent mapping
+# ===========================================================================
+#   FC       = amdflang
+#   FC_FLAGS = -O2 -fopenmp --offload-arch=gfx90a -fdo-concurrent-to-openmp=device
+#   MODFLAG  = -J build
+
+# ===========================================================================
+# Intel / ifx — GPU offload via OpenMP SPIR64 target
+# ===========================================================================
+#   FC       = ifx
+#   FC_FLAGS = -O3 -qopenmp -fopenmp-targets=spir64 -fopenmp-target-do-concurrent
+#   MODFLAG  = -module build
+
+# ===========================================================================
 # gfortran / ifx — host serial reference (DC runs on the CPU)
 # ===========================================================================
 #   gfortran:  FC = gfortran ; FC_FLAGS = -O2 ; MODFLAG = -J build   ; DATA = none
